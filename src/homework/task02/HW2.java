@@ -11,5 +11,7 @@ public class HW2 {
                   String name = sc.nextLine();
          System.out.println("Привет, " + name.toString()+"!");
 
+         sc.close();
+
      }
 }
