@@ -2,6 +2,9 @@ package homework.task03;
 
 import java.util.Scanner;
 
+/*1. Написать программу для вывода названия поры года по номеру
+        месяца. При решении используйте оператор switch-case.*/
+
 public class Season {
 
     public static void main(String args[]){

@@ -2,6 +2,9 @@ package homework.task03;
 
 import java.util.Scanner;
 
+/*3. Напишите программу, которая будет принимать на вход число и на
+        выход будет выводить сообщение четное число или нет.*/
+
 public class EvenNum {
     public static void main(String[] args){
         System.out.print("Введите число: ");
@@ -13,7 +16,5 @@ public class EvenNum {
         }else{
             System.out.println("Число нечётное");
         }
-
-
     }
 }
