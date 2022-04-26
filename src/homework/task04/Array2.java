@@ -5,19 +5,36 @@ package homework.task04;
 //Пусть будет возможность создавать массив произвольного размера. Пусть размер массива вводится с консоли.
 
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Array2 {
     public static void main(String [] args){
+        System.out.println("Введите количество элементов массива");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int array[] = new int[n];
-        Random random = new Random();
-        for(int i=0; i<n; i++){
-            array[i]=random.nextInt(21);
-        }
-        System.out.println(Arrays.toString(array));
 
+
+
+        for(int i=0; i<n; i++){
+            array[i]= (int) (0+Math.random()*21);
+        }
+
+        int max = 0;
+        for (int i=0; i<n; i++){
+            if(array[i]>max){
+                max=array[i];
+            }
+        }
+
+        int min = array[0];
+        for(int i=0; i<n; i++){
+            if (array[i]<min){
+                min=array[i];
+            }
+        }
+
+        System.out.println("Массив чисел: "+Arrays.toString(array)+". Максимальное значение: "+max+
+                ". Минимальное значение: "+min);
     }
 }
