@@ -15,7 +15,6 @@ public class Array2 {
         int array[] = new int[n];
 
 
-
         for(int i=0; i<n; i++){
             array[i]= (int) (0+Math.random()*21);
         }
@@ -34,7 +33,13 @@ public class Array2 {
             }
         }
 
+        int mediumSum=0;
+        for(int i=0; i<n; i++){
+            mediumSum=mediumSum+array[i];
+        }
+        int medium = mediumSum/n;
+
         System.out.println("Массив чисел: "+Arrays.toString(array)+". Максимальное значение: "+max+
-                ". Минимальное значение: "+min);
+                ". Минимальное значение: "+min+". Среднее значение: "+medium+".");
     }
 }
