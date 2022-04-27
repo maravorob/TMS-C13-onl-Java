@@ -14,33 +14,45 @@ public class Array4 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        Random rd = new Random();
 
         while(true){
             System.out.println("Введите число элементов массива (от 5 до 10 включительно).");
             int n = sc.nextInt();
 
             if ((n>5)&&(n<=10)){
-                int[] array=createArray(n);
+
+                int[] array = new int[n];
+                for(int i=0; i<array.length; i++){
+                    array[i]=rd.nextInt(21);
+                }
                 System.out.println("Исходный массив:"+(Arrays.toString(array)));
+
+                int count =0;
+                for (int i=0; i<array.length; i++){
+                    if (array[i]%2==0){
+                        count++;
+                    }
+                }
+
+                int[] newArray = new int[array.length-count];
+                for (int i = 0, j=0; j < array.length; i++,j++) {
+                    if (array[i] %2==0) {
+                        if (i==array.length-1){
+                            break;
+                        }
+                        newArray[i]=array[j++];  //.ArrayIndexOutOfBoundsException - исправить
+                    }
+                    newArray[i]=array[j];
+                }
+                System.out.println("Количество четных элементов в массиве: "+count);
+                System.out.println("Новый массив: "+Arrays.toString(newArray));
+
                 break;
 
             }else{
                 System.out.print("Неверное значение. ");
             }
         }
-
-
-
-
     }
-
-    static int[] createArray(int elements){
-        Random rd = new Random();
-        int array[] = new int[elements];
-        for(int i=0; i<array.length; i++){
-            array[i]=rd.nextInt(21);
-        }
-        return array;
-    }
-
 }
