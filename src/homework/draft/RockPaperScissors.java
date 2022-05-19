@@ -1,4 +1,4 @@
-package homework.task05;
+package homework.draft;
 
 import java.util.Scanner;
 
