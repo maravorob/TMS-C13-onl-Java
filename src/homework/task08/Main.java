@@ -9,8 +9,8 @@ public class Main {
         Phone [] phones = {phone1, phone2, phone3};
 
         for (Phone i : phones){
-            i.recieveCall("Misha");
-            i.recieveCall("Kolya", 1235489);
+            i.recieveCall("Миша");
+            i.recieveCall("Коля", 1235489);
         }
 
         phone1.sendMessage(5489632);
